@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salud Mental</title>
+    <link rel="stylesheet" href="css/styles3.css"> <!-- Suponiendo que tienes un archivo de estilos CSS -->
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#"><img src="imagenes/Logo.jpg" alt="Logo TipBrain"></a>
+            </div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="salud-mental.html">Salud Mental</a></li>
+                <li><a href="inteligencia-emocional.html">Inteligencia Emocional</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/tipbrain_ya/" target="_blank"><img src="imagenes/instagram.jpeg" alt="Instagram"></a>
+                <a href="https://whatsapp.com/channel/0029Vam4ojz7Noa5hnZV2S3N" target="_blank"><img src="imagenes/pngwing.com.png" alt="WhatsApp"></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="left">
+                <h2>Tips sobre Salud Mental</h2>
+                <div id="tip-container">
+                    <ul id="tip-list">
+                        <li class="tip active"><strong>Haz ejercicio regularmente:</strong> El ejercicio físico no solo mejora tu salud, sino que también reduce el estrés y mejora tu estado de ánimo.</li>
+                        <li class="tip"><strong>Establece una rutina diaria:</strong> Tener una estructura y horarios regulares puede proporcionarte un sentido de control y estabilidad.</li>
+                        <li class="tip"><strong>Practica la meditación:</strong> Técnicas de relajación, como la meditación, pueden ayudarte a reducir la ansiedad y a mantener una mente tranquila.</li>
+                        <li class="tip"><strong>Duerme lo suficiente:</strong> Un buen descanso es esencial para el bienestar mental. Intenta dormir entre 7 y 9 horas cada noche.</li>
+                        <li class="tip"><strong>Aliméntate de manera saludable:</strong> Una dieta equilibrada puede influir positivamente en tu salud mental y emocional.</li>
+                        <li class="tip"><strong>Habla sobre tus sentimientos:</strong> Compartir lo que sientes con alguien de confianza puede ayudarte a liberar emociones y a sentirte apoyado.</li>
+                        <li class="tip"><strong>Haz actividades que te gusten:</strong> Realizar hobbies y actividades que disfrutes es importante para tu bienestar mental.</li>
+                        <li class="tip"><strong>Establece límites:</strong> Aprender a decir "no" es clave para evitar el agotamiento y proteger tu salud mental.</li>
+                        <li class="tip"><strong>Busca ayuda profesional si la necesitas:</strong> Consultar con un terapeuta o psicólogo puede ser crucial si estás atravesando momentos difíciles.</li>
+                        <li class="tip"><strong>Practica la resiliencia:</strong> Aprende a adaptarte y a recuperarte de las adversidades para mantener una salud mental fuerte.</li>
+                    </ul>
+                    
+                    <div class="indicator-container">
+                        <span class="indicator active"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <img src="imagenes/premio-2-scaled-e1639672881884.jpg" alt="Imagen representativa de los Tips">
+            </div>
+        </div>
+
+        <div class="encuesta-container">
+            <div class="bottom">
+                <h2>Video explicativo sobre la salud mental</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/05SjFIhdEtQ?si=A0JTn47gPYRNoM1g" title="Video de YouTube sobre salud mental" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="encuesta-right">
+                <h2>Encuesta sobre la salud mental</h2>
+                <p>¡Tu opinión es muy importante para nosotros! Participa en nuestra encuesta y contribuye a mejorar nuestros contenidos.</p>
+                <a href="https://forms.office.com/r/DACnepx45t" class="btn" target="_blank">Participar en la encuesta</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 TipBrain | Diseñado como proyecto universitario.</p>
+            <p><small><strong>Advertencia:</strong> La información aquí proporcionada es educativa. Para ayuda específica, consulta a un experto.</small></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tips = document.querySelectorAll('.tip');
+            const indicators = document.querySelectorAll('.indicator');
+            let currentTip = 0;
+
+            function showNextTip() {
+                // Oculta el tip actual y quita la clase activa del indicador
+                tips[currentTip].classList.remove('active');
+                indicators[currentTip].classList.remove('active');
+
+                // Cicla al siguiente tip
+                currentTip = (currentTip + 1) % tips.length;
+
+                // Muestra el siguiente tip y agrega la clase activa al indicador
+                tips[currentTip].classList.add('active');
+                indicators[currentTip].classList.add('active');
+            }
+
+            showNextTip(); // Muestra el primer tip de inmediato
+
+            // Cambiar el tip cada 7 segundos
+            setInterval(showNextTip, 7000);
+        });
+    </script>
+</body>
+</html>

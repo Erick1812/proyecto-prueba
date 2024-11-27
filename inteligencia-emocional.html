@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Inteligencia Emocional</title>
+    <link rel="stylesheet" href="css/styles2.css">
+</head>
+
+<header>
+    <nav>
+        <div class="logo">
+            <a href="#"><img src="imagenes/Logo.jpg" alt="Logo"></a>
+        </div>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="salud-mental.html">Salud Mental</a></li>
+            <li><a href="inteligencia-emocional.html">Inteligencia Emocional</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/tipbrain_ya/" target="_blank"><img src="imagenes/instagram.jpeg" alt="Instagram"></a>
+            <a href="https://whatsapp.com/channel/0029Vam4ojz7Noa5hnZV2S3N" target="_blank"><img src="imagenes/pngwing.com.png" alt="WhatsApp"></a>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <main>
+        <div class="container">
+            <!-- Contenedor izquierdo (imagen) -->
+            <div class="left">
+                <img src="imagenes/WhatsApp Image 2024-11-23 at 2.36.20 PM.jpeg" alt="Descripción de los Tips">
+            </div>
+            
+
+            <!-- Contenedores centrales -->
+            <div class="center">
+                <div class="top">
+                    <h2>Tips sobre Inteligencia Emocional</h2>
+                    <div id="tip-container">
+                        <ul id="tip-list">
+                            <li class="tip active"><strong>Reconoce y nombra tus emociones:</strong> Ser consciente de lo que sientes es el primer paso para manejar tus emociones de manera efectiva.</li>
+                            <li class="tip"><strong>Practica la autorregulación emocional:</strong> Aprende a controlar tus impulsos y reacciones para tomar decisiones más sabias.</li>
+                            <li class="tip"><strong>Desarrolla la empatía:</strong> Entender y compartir los sentimientos de los demás mejora tus relaciones interpersonales.</li>
+                            <li class="tip"><strong>Escucha activamente:</strong> Presta atención completa a lo que las personas dicen y cómo lo dicen, no solo a las palabras.</li>
+                            <li class="tip"><strong>Reconoce el impacto de tus emociones en los demás:</strong> Ser consciente de cómo tus sentimientos afectan a los otros puede mejorar tus interacciones sociales.</li>
+                            <li class="tip"><strong>Mantén una actitud positiva:</strong> Cultivar una mentalidad positiva te permite gestionar mejor las dificultades emocionales y disfrutar de relaciones más saludables.</li>
+                            <li class="tip"><strong>Desarrolla tu inteligencia social:</strong> Practica la habilidad de interactuar de manera efectiva con los demás, comprendiendo sus necesidades y emociones.</li>
+                            <li class="tip"><strong>Gestiona tus emociones en situaciones difíciles:</strong> Aprende a mantener la calma en momentos de conflicto para tomar decisiones más racionales y menos impulsivas.</li>
+                            <li class="tip"><strong>Refuerza tu autoconciencia emocional:</strong> Reflexiona regularmente sobre tus emociones para poder entender mejor tus reacciones y patrones emocionales.</li>
+                            <li class="tip"><strong>Busca el equilibrio entre tus emociones y pensamientos:</strong> No dejes que las emociones dominen tu mente; aprende a tomar decisiones equilibradas entre tus emociones y la lógica.</li>
+                        </ul>
+                        
+                        <div class="indicator-container">
+                            <span class="indicator active"></span>
+                            <span class="indicator"></span>
+                            <span class="indicator"></span>
+                            <span class="indicator"></span>
+                            <span class="indicator"></span>
+                            <span class="indicator"></span>
+                            <span class="indicator"></span>
+                            <span class="indicator"></span>
+                            <span class="indicator"></span>
+                            <span class="indicator"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom">
+                    <!-- Video de YouTube -->
+                    <h2>Video explicativo sobre la Inteligencia Emocional</h2>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/vkhmTQ1PFbo?si=GeuDtqfOxqq5ChTh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Contenedor derecho (enlaces a encuestas) -->
+            <div class="right">
+                <div class="encuesta-container">
+                    <h2>Encuesta sobre Inteligencia Emocional</h2>
+                    <p>¡Queremos conocer tu opinión sobre la inteligencia emocional! Tu participación nos ayudará a mejorar nuestros contenidos y a ofrecerte información más relevante.</p>
+                    <a href="https://forms.office.com/r/FMFwaxgdXy" class="btn">Participar en la encuesta</a>
+
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 TipBrain | Diseñado como proyecto universitario.</p>
+            <p><small><strong>Advertencia:</strong> La información aquí proporcionada es educativa. Para ayuda específica, consulta a un experto.</small></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tips = document.querySelectorAll('.tip');
+            const indicators = document.querySelectorAll('.indicator');
+            let currentTip = 0;
+
+            function showNextTip() {
+                // Oculta el tip actual y quita la clase activa del indicador
+                tips[currentTip].classList.remove('active');
+                indicators[currentTip].classList.remove('active');
+
+                // Cicla al siguiente tip
+                currentTip = (currentTip + 1) % tips.length;
+
+                // Muestra el siguiente tip y agrega la clase activa al indicador
+                tips[currentTip].classList.add('active');
+                indicators[currentTip].classList.add('active');
+            }
+
+            showNextTip(); // Muestra el primer tip de inmediato
+
+            // Cambiar el tip cada 7 segundos
+            setInterval(showNextTip, 7000);
+        });
+    </script>
+</body>
+</html>

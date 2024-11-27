@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros</title>
+    <link rel="stylesheet" href="css/styles5.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#"><img src="imagenes/Logo.jpg" alt="Logo"></a>
+            </div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="salud-mental.html">Salud Mental</a></li>
+                <li><a href="inteligencia-emocional.html">Inteligencia Emocional</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/tipbrain_ya/" target="_blank"><img src="imagenes/instagram.jpeg" alt="Instagram"></a>
+                <a href="https://whatsapp.com/channel/0029Vam4ojz7Noa5hnZV2S3N" target="_blank"><img src="imagenes/pngwing.com.png" alt="WhatsApp"></a>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <h2><center>TipBrain</center></h2>
+        <div class="right">
+            <center><img src="imagenes/Nosotros.jpg" alt="Imagen sobre nosotros"></center>
+        </div>
+        <br></br>
+        <div class="Sobre">
+            Somos un equipo dedicado a promover la inteligencia emocional y la salud mental, ayudando a las personas a desarrollar 
+            habilidades esenciales como la gestión emocional, la comunicación asertiva y la resolución de conflictos. Trabajamos con 
+            pasión para crear programas innovadores, brindar apoyo profesional y fomentar entornos positivos que impulsen el bienestar y el crecimiento personal.
+        </div>
+        </section>
+
+    <main>
+       <!-- <div class="container">
+             Sección con los 10 Tips sobre Inteligencia Emocional y Salud Mental
+            <div class="left">
+                <h2>Tips sobre Inteligencia Emocional y Salud Mental</h2>
+                <div id="tip-container">
+                    <ul id="tip-list">
+                        <li class="tip active"><strong>Reconoce y nombra tus emociones:</strong> Ser consciente de lo que sientes es el primer paso para manejar tus emociones de manera efectiva.</li>
+                        <li class="tip"><strong>Practica la autorregulación emocional:</strong> Aprende a controlar tus impulsos y reacciones para tomar decisiones más sabias.</li>
+                        <li class="tip"><strong>Desarrolla la empatía:</strong> Entender y compartir los sentimientos de los demás mejora tus relaciones interpersonales.</li>
+                        <li class="tip"><strong>Escucha activamente:</strong> Presta atención completa a lo que las personas dicen y cómo lo dicen, no solo a las palabras.</li>
+                        <li class="tip"><strong>Gestiona el estrés de manera saludable:</strong> La meditación y el yoga pueden ayudarte a reducir el estrés y mejorar tu bienestar emocional.</li>
+                        <li class="tip"><strong>Cuida tu bienestar físico:</strong> El ejercicio, la alimentación balanceada y el sueño adecuado son clave para mantener una buena salud mental.</li>
+                        <li class="tip"><strong>Practica la gratitud:</strong> Reflexiona sobre las cosas por las que estás agradecido, mejorando tu perspectiva de la vida.</li>
+                        <li class="tip"><strong>Busca apoyo cuando lo necesites:</strong> Hablar con un amigo o profesional puede ayudarte a procesar tus emociones y encontrar soluciones a tus problemas.</li>
+                        <li class="tip"><strong>Establece metas realistas:</strong> Tener objetivos claros y alcanzables aumenta tu motivación y reduce la ansiedad.</li>
+                        <li class="tip"><strong>Haz tiempo para ti mismo:</strong> Dedica tiempo a actividades que disfrutes para mantener un equilibrio emocional y mental.</li>
+                    </ul>
+                    <div class="indicator-container">
+                        <span class="indicator active"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right">
+                <img src="imagenes/imagen.jpeg" alt="Descripción de los Tips">
+            </div>
+        </div>-->
+
+        <!-- Sección de Encuestas 
+        <div class="encuesta-container">
+            <div class="encuesta-left">
+                <h2>Encuesta General</h2>
+                <p>¡Tu opinión es muy importante para nosotros! Participa en nuestra encuesta y contribuye a mejorar nuestros contenidos.</p>
+                <a href="https://forms.office.com/r/NQFGSKkckn" class="btn">Participar en la encuesta</a>
+            </div>
+            <div class="encuesta-right">
+                <h2>Temas de interés</h2>
+                <ul>
+                    <li><a href="salud-mental.html" class="btn">Salud Mental</a></li>
+                    <li><a href="inteligencia-emocional.html" class="btn">Inteligencia Emocional</a></li>
+                </ul>
+            </div>
+        </div>
+        
+    </main>-->
+
+    <footer>
+        <div class="footer-content">
+            <p>Diseñado como parte de un proyecto universitario.</p>
+            <small>Para más información, contacta a un profesional especializado.</small>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tips = document.querySelectorAll('.tip');
+            const indicators = document.querySelectorAll('.indicator');
+            let currentTip = 0;
+    
+            function showNextTip() {
+                // Oculta el tip actual y quita la clase activa del indicador
+                tips[currentTip].classList.remove('active');
+                indicators[currentTip].classList.remove('active');
+    
+                // Cicla al siguiente tip
+                currentTip = (currentTip + 1) % tips.length; 
+    
+                // Muestra el siguiente tip y agrega la clase activa al indicador
+                tips[currentTip].classList.add('active');
+                indicators[currentTip].classList.add('active');
+            }
+    
+            showNextTip(); // Muestra el primer tip de inmediato
+    
+            // Cambiar el tip cada 7 segundos
+            setInterval(showNextTip, 7000);
+        });
+    </script>
+</body>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 TipBrain | Diseñado como proyecto universitario.</p>
+        <p><small><strong>Advertencia:</strong> La información aquí proporcionada es educativa. Para ayuda específica, consulta a un experto.</small></p>
+    </div>
+</footer>
+
+
+</html>
